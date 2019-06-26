@@ -72,7 +72,7 @@ export default {
     'other-towns-title': 'What about other towns?',
     'other-towns-intro': `Other than the town of Rome, is is possible to find other town's
       dataset on the topic?`,
-    'other-towns-is-data-available': `In the <1>budget law 2018</1> 
+    'other-towns-is-data-available': `In the <2>budget law 2018</2> 
     the Ministry of Transports and Infrastructure was supposed to
     create a national database for unhautorized development data where
     each public administration should have submitted its data,
@@ -93,9 +93,9 @@ export default {
     'contribute-intro': `Do you like this project and would like to help? There are a lot
       of things you can help with!`,
     'contribute-how': `If you find a bug or issue using the charts in the article please
-    notify us either <1>su Github</1> or <4>via email</4>. In alternative you can help us find more dataset on the matter
+    notify us either <2>su Github</2> or <6>via email</6>. In alternative you can help us find more dataset on the matter
     asking your town to publish the data for unauthorised development
-    using the <7>FOIApop service</7>: look for your town, click on "Nuovo Accesso Civico
+    using the <9>FOIApop service</9>: look for your town, click on "Nuovo Accesso Civico
     Generalizzato" and use the "Richiesta dati opere
     abusive" subject in the form. Then write a request for the
     data.`,

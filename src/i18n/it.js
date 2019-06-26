@@ -70,7 +70,7 @@ export default {
     'other-towns-title': 'E gli altri comuni?',
     'other-towns-intro':
       "Quali altri comuni pubblicano i dati riguardo l'abusivismo edilizio sul loro territorio?",
-    'other-towns-is-data-available': `Nella <1>legge di bilancio 2018</1> 
+    'other-towns-is-data-available': `Nella <2>legge di bilancio 2018</2> 
       il Ministero dei Trasporti e delle Infrastrutture avrebbe dovuto
       istituire "la banca di dati nazionale sull'abusivismo
       edilizio" in cui gli enti e le amministrazioni dovrebbero
@@ -92,9 +92,9 @@ export default {
     'contribute-intro':
       'Ti piace questo progetto e vorresti contribuire? Ci sono un sacco di cose che puoi fare!',
     'contribute-how': `Come prima cosa se trovi qualche problema con l'utilizzo dei
-      grafici sopra segnalacelo <1>su Github</1> o <4>via email</4>. Altrimenti puoi aiutarci a far aprire al tuo comune i dati
+      grafici sopra segnalacelo <2>su Github</2> o <6>via email</6>. Altrimenti puoi aiutarci a far aprire al tuo comune i dati
       riguardo l'abusivismo edilizio utilizzando 
-      <7>il servizio FOIApop</7>: cerca il
+      <9>il servizio FOIApop</9>: cerca il
       tuo comune, poi richiedi il "Nuovo Accesso Civico
       Generalizzato" e come testo metti "Richiesta dati
       opere abusive".`,
