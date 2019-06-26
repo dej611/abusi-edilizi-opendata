@@ -1,0 +1,139 @@
+{
+  "years": [
+    "2000",
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011"
+  ],
+  "series": [
+    {
+      "Appartamento": "618",
+      "Capannone": "30",
+      "Edificio": "137",
+      "Fabbricato": "303",
+      "Locale": "288",
+      "Manufatto": "0",
+      "Terreno": "659",
+      "Non indicato": "8",
+      "date": "2000"
+    },
+    {
+      "Appartamento": "647",
+      "Capannone": "18",
+      "Edificio": "148",
+      "Fabbricato": "264",
+      "Locale": "349",
+      "Manufatto": "0",
+      "Terreno": "629",
+      "Non indicato": "11",
+      "date": "2001"
+    },
+    {
+      "Appartamento": "536",
+      "Capannone": "25",
+      "Edificio": "139",
+      "Fabbricato": "236",
+      "Locale": "398",
+      "Manufatto": "0",
+      "Terreno": "629",
+      "Non indicato": "29",
+      "date": "2002"
+    },
+    {
+      "Appartamento": "629",
+      "Capannone": "13",
+      "Edificio": "124",
+      "Fabbricato": "264",
+      "Locale": "319",
+      "Manufatto": "1",
+      "Terreno": "635",
+      "Non indicato": "41",
+      "date": "2003"
+    },
+    {
+      "Appartamento": "571",
+      "Capannone": "10",
+      "Edificio": "134",
+      "Fabbricato": "233",
+      "Locale": "232",
+      "Manufatto": "0",
+      "Terreno": "519",
+      "Non indicato": "188",
+      "date": "2004"
+    },
+    {
+      "Appartamento": "549",
+      "Capannone": "6",
+      "Edificio": "120",
+      "Fabbricato": "286",
+      "Locale": "215",
+      "Manufatto": "2",
+      "Terreno": "446",
+      "Non indicato": "201",
+      "date": "2005"
+    },
+    {
+      "Appartamento": "471",
+      "Capannone": "8",
+      "Edificio": "118",
+      "Fabbricato": "170",
+      "Locale": "170",
+      "Manufatto": "0",
+      "Terreno": "396",
+      "Non indicato": "337",
+      "date": "2006"
+    },
+    {
+      "Appartamento": "430",
+      "Capannone": "3",
+      "Edificio": "150",
+      "Fabbricato": "165",
+      "Locale": "207",
+      "Manufatto": "4",
+      "Terreno": "356",
+      "Non indicato": "277",
+      "date": "2007"
+    },
+    {
+      "Appartamento": "424",
+      "Capannone": "5",
+      "Edificio": "140",
+      "Fabbricato": "213",
+      "Locale": "223",
+      "Manufatto": "19",
+      "Terreno": "344",
+      "Non indicato": "210",
+      "date": "2008"
+    },
+    {
+      "Appartamento": "354",
+      "Capannone": "9",
+      "Edificio": "70",
+      "Fabbricato": "174",
+      "Locale": "192",
+      "Manufatto": "30",
+      "Terreno": "328",
+      "Non indicato": "287",
+      "date": "2009"
+    },
+    {
+      "Appartamento": "215",
+      "Capannone": "8",
+      "Edificio": "61",
+      "Fabbricato": "66",
+      "Locale": "81",
+      "Manufatto": "22",
+      "Terreno": "122",
+      "Non indicato": "303",
+      "date": "2010"
+    }
+  ]
+}

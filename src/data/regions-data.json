@@ -1,0 +1,86 @@
+{
+    "fonte": "Rapporto BES 2018 - Istat - dati indicatori Abusivismo Edilizio",
+    "link": "https://www.istat.it/it/archivio/rapporto+bes",
+    "regions": [
+        {
+            "name": "Abruzzo",
+            "value": 36.2
+        },
+        {
+            "name": "Basilicata",
+            "value": 65.4
+        },
+        {
+            "name": "Calabria",
+            "value": 65.4
+        },
+        {
+            "name": "Campania",
+            "value": 67.6
+        },
+        {
+            "name": "Emilia Romagna",
+            "value": 6.0
+        },
+        {
+            "name": "Friuli Venezia Giulia",
+            "value": 3.9
+        },
+        {
+            "name": "Lazio",
+            "value": 26.3
+        },
+        {
+            "name": "Liguria",
+            "value": 14.7
+        },
+        {
+            "name": "Lombardia",
+            "value": 6.3
+        },
+        {
+            "name": "Marche",
+            "value": 18.1
+        },
+        {
+            "name": "Molise",
+            "value": 36.2
+        },
+        {
+            "name": "Puglia",
+            "value": 39.6
+        },
+        {
+            "name": "Piemonte",
+            "value": 5.3
+        },
+        {
+            "name": "Sardegna",
+            "value": 31.4
+        },
+        {
+            "name": "Sicilia",
+            "value": 60.9
+        },
+        {
+            "name": "Toscana",
+            "value": 12.5
+        },
+        {
+            "name": "Trentino Alto Adige",
+            "value": 3.9
+        },
+        {
+            "name": "Umbria",
+            "value": 18.1
+        },
+        {
+            "name": "Valle d'Aosta",
+            "value": 5.3
+        },
+        {
+            "name": "Veneto",
+            "value": 7.2
+        }
+    ]
+}

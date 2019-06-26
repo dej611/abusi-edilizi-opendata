@@ -1,0 +1,88 @@
+{
+    "fonte": "Anno 2019",
+    "rows": {
+        "roma": [
+            {
+                "geo": true,
+                "time": true,
+                "types": false,
+                "startDate": 2000,
+                "endDate": 2011,
+                "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
+                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1655",
+                "name": "Abusi edilizi accertati secondo il municipio e l'anno di accertamento. Anni 2000-2011"
+            },
+            {
+                "geo": false,
+                "time": true,
+                "types": true,
+                "startDate": 2000,
+                "endDate": 2011,
+                "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
+                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1637",
+                "name": "Abusi edilizi accertati secondo l'anno di accertamento e tipo di edificio. Anni 2000-2011"
+            },
+            {
+                "geo": true,
+                "time": false,
+                "types": true,
+                "startDate": 2000,
+                "endDate": 2011,
+                "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
+                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1652",
+                "name": "Abusi edilizi accertati secondo il municipio e tipo di edificio. Totale anni 2000-2011"
+            },
+            {
+                "geo": true,
+                "time": false,
+                "types": true,
+                "startDate": 2000,
+                "endDate": 2011,
+                "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
+                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1646",
+                "name": "Abusi edilizi accertati secondo il municipio e la tipologia di abuso. Totale anni 2000-2011"
+            },
+            {
+                "geo": false,
+                "time": true,
+                "types": false,
+                "startDate": 2000,
+                "endDate": 2011,
+                "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
+                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1640",
+                "name": "Abusi edilizi accertati secondo l'anno di accertamento e la categoria di responsabile. Anni 2000-2011"
+            },
+            {
+                "geo": true,
+                "time": false,
+                "types": false,
+                "startDate": 2000,
+                "endDate": 2011,
+                "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
+                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1649",
+                "name": "Abusi edilizi accertati secondo il municipio e la categoria di responsabile. Totale anni 2000-2011"
+            },
+            {
+                "geo": false,
+                "time": false,
+                "types": true,
+                "startDate": 2000,
+                "endDate": 2011,
+                "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
+                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1643",
+                "name": "Abusi edilizi accertati secondo l'anno di accertamento e la tipologia di abuso. Anni 2000-2011"
+            }
+        ],
+        "palermo": [
+            {
+                "geo": true,
+                "time": true,
+                "types": true,
+                "startDate": 2012,
+                "endDate": 2015,
+                "link": "https://www.comune.palermo.it/opendata_dld.php?id=505",
+                "name": "ABUSI EDILIZI POLIZIA MUNICIPALE PALERMO - AGGIORNATO AL 2015"
+            }
+        ]
+    }
+}
