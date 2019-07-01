@@ -95,7 +95,7 @@ class AdministrativeMap extends PureComponent {
     );
   };
   render() {
-    const {year, data, fixed, isMobile, t} = this.props;
+    const {year, data, fixed, isMobile, t, highlight} = this.props;
 
     const totals = data.municipalities.map(municipality =>
       municipality
@@ -117,13 +117,15 @@ class AdministrativeMap extends PureComponent {
 
     const colors = totals.map(t => fillScale(t));
 
-    const label = year ? `${t('charts:Anno')} ${year}` : `${t('charts:Anni')} 2000 - 2010`;
+    const label = year
+      ? `${t('charts:Anno')} ${year}`
+      : `${t('charts:Anni')} 2000 - 2010`;
     // With this trick the highlighted shape will show the full border
     const sortByHighlight = (a, b) => {
-      if (this.props.highlight === a.properties.id) {
+      if (highlight === a.properties.id) {
         return 1;
       }
-      if (this.props.highlight === b.properties.id) {
+      if (highlight === b.properties.id) {
         return -1;
       }
       return a.properties.id - b.properties.id;
