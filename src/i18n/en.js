@@ -10,8 +10,29 @@ export default {
     understand the current state of the problem by exploring the data
     available and building a data visualization able to provide an
     insight on the topic.`,
+    explanation: `Before diving in the analysis, let's clarify what is 
+    the meaning of unauthorized development, at least in Italy.
+    The unauthrized development can be either an administrative offence, 
+    or a criminal offence, from an illegal construction because of missing 
+    permissions or ignoring the regulations.
+    In Italy there are different types of unauthorized development, but the 
+    most common types are the following three: structural, urbanisation and environmental.
+    To clarify the difference between the three, here's few examples: when 
+    there's a building with an environmental protection regulation, any development 
+    activity on such building is not permitted, hence it is an environmental abuse; 
+    if a structural wall is modified in order to create an opening, then this is a 
+    structural abuse; as for an urbanisation abuse we'll talk about changing a 
+    non-structural wall inside an house without communicating the change to the 
+    authorized offices, or making the change without the relative permissions.`,
+    dangerous: `The big problem of unauthorized development, it is not the 
+    administrative offence per se (which is already an issue), but the security 
+    concern that the abuse creates: in particular the structural and environmental 
+    abuses can generate security problems leading even to death in the worst scenarios 
+    of the author of the abuse, or even more people around the illegal building 
+    - for example in the case of hydrogeological instability of the location.`,
     research: `From a quick search online, it is clear that many articles on the
-    topic often point to this single reference as data: <2>Rapporti Benessere Equo e Sostenibile (BES)</2>. That is report made by the Italian Statistican Institute (ISTAT)
+    topic often point to this single reference as data: <2>Rapporti Benessere Equo e Sostenibile (BES)</2>. 
+    That is report made by the Italian Statistican Institute (ISTAT)
     and it is published with updated data every year. The report
     itself is very complete and the unauthorised development problem
     data is confined in the environment section of the report. The

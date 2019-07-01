@@ -10,6 +10,30 @@ export default {
           situazione tramite l'analisi dei dati, esplorando le fonti
           disponibili e costruendo una mappa del tipo di informazione in
           esso contenuta.`,
+    explanation: `Ma prima di iniziare l'esplorazione, chiariamo di cosa si parla
+          quando si dice "abuso edilizio": un abuso edilizio è un illecito
+          di tipo amministrativo (es. multa) o penale, causato da una
+          costruzione su suolo non edificabile oppure la costruzione senza
+          le dovute autorizzazioni richieste dai regolamenti in materia.
+          Esistono, in Italia, diversi tipi di abusi edilizi, tra cui i
+          più comuni sono: strutturale, urbanistico e paesaggistico. Per
+          spiegarne le differenze, se si decide di fare un intervento
+          edilizio su di un edificio sotto vincolo paesaggistico oppure
+          per colorare la facciata di una parete esterna di un colore
+          arbitrario in un condominio, allora si può incorrere in un abuso
+          edilizio di tipo paesaggistico. Qualora si decidesse di
+          effettuare un intervento edilizio su di un muro interno ad un
+          edificio senza comunicarlo agli appositi uffici, allora si
+          tratterebbe di un abuso urbanistico. Se invece si modificasse
+          una parete portante, ad esempio aprendo un varco, allora l'abuso
+          sarebbe di tipo strutturale.`,
+    dangerous: `Oltre al problema amministrativo in sè, è importante notare come
+          l'abuso edilizio, in particolare quello di tipo strutturale e
+          paesaggistico ma non solo, possa arrecare un pericolo per il
+          cittadino. In particolare quando l'abuso è effettuato ignorando
+          vincoli o disposizioni legate alla sicurezza questo può essere
+          una fonte di grave pericolo per sè oltre che per altre persone - 
+          ad esempio in caso di costruzione su area con dissesto idrogeologico.`,
     research: `Da una semplice ricerca a livello nazionale risulta che molti
           articoli che trattano il tema facciano spesso riferimento ai <2>Rapporti Benessere Equo e Sostenibile (BES)</2> 
           redatti dall'Istat: ogni anno l'Istat pubblica un rapporto
