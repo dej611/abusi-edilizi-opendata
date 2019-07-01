@@ -1,9 +1,8 @@
 import React, {Fragment} from 'react';
 import {string, func} from 'prop-types';
 import {LegendLinear, LegendItem, LegendLabel} from '@vx/legend';
-import {withTranslation} from 'react-i18next';
 
-function Legend({scale, source, t}) {
+function Legend({scale, source}) {
   return (
     <Fragment>
       <div className="legend-container">
@@ -36,7 +35,7 @@ function Legend({scale, source, t}) {
                       />
                     </svg>
                     <LegendLabel align={'left'} margin={0}>
-                      {t(label.text)}
+                      {label.text}
                     </LegendLabel>
                   </LegendItem>
                 );
@@ -55,4 +54,4 @@ Legend.propTypes = {
   source: string,
 };
 
-export default withTranslation()(Legend);
+export default Legend;

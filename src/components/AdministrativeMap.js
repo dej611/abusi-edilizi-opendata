@@ -6,6 +6,7 @@ import {
   ZoomableGroup,
   Geographies,
   Geography,
+  Annotation,
 } from 'react-simple-maps';
 import {scaleLinear} from '@vx/scale';
 import {scaleLinear as scaleLinearFn} from 'd3-scale';
@@ -49,6 +50,49 @@ class AdministrativeMap extends PureComponent {
     if (i != null) {
       setTimeout(() => this.props.handleAreaHover(i), 150);
     }
+  };
+
+  renderAnnotations = selection => {
+    // maybe later unproject the coords and workout a better placement
+    // const leftMostX = 12.234058;
+    // const rightMostX = 12.85589;
+    const annotations = [
+      {dx: 135, dy: -180, subject: [12.473005178466167, 41.90115330493791]},
+      {dx: 119, dy: -130, subject: [12.499990873982766, 41.92051616121312]},
+      {dx: 85, dy: -30, subject: [12.554261766118378, 41.996317824291]},
+      {dx: 63, dy: -40, subject: [12.591203872621438, 41.93212355183638]},
+      {dx: 73, dy: -50, subject: [12.575586136402606, 41.88914450437655]},
+      {dx: 5, dy: 65, subject: [12.686761243799408, 41.887622865348646]},
+      {dx: 70, dy: 65, subject: [12.581620751831876, 41.83914549841999]},
+      {dx: 100, dy: 80, subject: [12.529373555163973, 41.82840578631889]},
+      {dx: 120, dy: 50, subject: [12.497741441818528, 41.75766867967468]},
+      {dx: -45, dy: 50, subject: [12.362671159332718, 41.740181639353786]},
+      {dx: -55, dy: 30, subject: [12.376787332511073, 41.83067722960807]},
+      {dx: -35, dy: 40, subject: [12.344669450471354, 41.87101721743076]},
+      {dx: -38, dy: -25, subject: [12.346248945216098, 41.91038959760859]},
+      {dx: -38, dy: -80, subject: [12.345506028289778, 41.975578989467394]},
+      {dx: 5, dy: -80, subject: [12.415672802092525, 42.02962255809816]},
+    ];
+
+    if (!selection) {
+      return null;
+    }
+
+    const {dx, dy, subject} = annotations[selection - 1];
+
+    return (
+      <Annotation
+        dx={dx}
+        dy={dy}
+        subject={subject}
+        strokeWidth={1}
+        stroke="#607D8B"
+      >
+        <text>
+          {this.props.t('charts:Municipio')} {selection}
+        </text>
+      </Annotation>
+    );
   };
   render() {
     const {year, data, fixed, isMobile, t} = this.props;
@@ -94,7 +138,7 @@ class AdministrativeMap extends PureComponent {
           height={400}
           className="map-full-size"
         >
-          <ZoomableGroup center={[12.483463, 41.897976]} disablePanning={true}>
+          <ZoomableGroup center={[12.483463, 41.897976]} disablePanning>
             <Geographies geography={topojsonURL} disableOptimization>
               {(geographies, projection) =>
                 geographies
@@ -121,11 +165,10 @@ class AdministrativeMap extends PureComponent {
                           default: {
                             fill: color,
                             stroke:
-                              this.props.highlight === currentId
+                              highlight === currentId
                                 ? COLORS.blue
                                 : COLORS.black,
-                            strokeWidth:
-                              this.props.highlight === currentId ? 2.75 : 0.75,
+                            strokeWidth: highlight === currentId ? 2.75 : 0.75,
                             outline: 'none',
                           },
                           hover: hoverOrSelectedStyle,
@@ -136,6 +179,7 @@ class AdministrativeMap extends PureComponent {
                   })
               }
             </Geographies>
+            {this.renderAnnotations(highlight)}
           </ZoomableGroup>
         </ComposableMap>
         <Legend source={label} scale={scale} />
