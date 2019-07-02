@@ -7,7 +7,7 @@ async function printSVGElement(page, wrapperClass, fileName) {
   await element.screenshot({path: `./public/${fileName}.png`});
 }
 
-(async () => {
+module.exports = async function prerender() {
   let server, browser;
   try {
     server = await webServer.start();
@@ -34,4 +34,4 @@ async function printSVGElement(page, wrapperClass, fileName) {
     await browser.close();
     await server.close();
   }
-})();
+};
