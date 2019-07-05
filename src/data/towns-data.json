@@ -19,7 +19,7 @@
                 "startDate": 2000,
                 "endDate": 2011,
                 "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
-                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1637",
+                "link": "https://dataportal.daf.teamdigitale.it/#/dataset/dset978?type=open",
                 "name": "Abusi edilizi accertati secondo l'anno di accertamento e tipo di edificio. Anni 2000-2011"
             },
             {
@@ -29,7 +29,7 @@
                 "startDate": 2000,
                 "endDate": 2011,
                 "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
-                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1652",
+                "link": "https://dataportal.daf.teamdigitale.it/#/dataset/dset981?type=open",
                 "name": "Abusi edilizi accertati secondo il municipio e tipo di edificio. Totale anni 2000-2011"
             },
             {
@@ -39,7 +39,7 @@
                 "startDate": 2000,
                 "endDate": 2011,
                 "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
-                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1646",
+                "link": "https://dataportal.daf.teamdigitale.it/#/dataset/dset983?type=open",
                 "name": "Abusi edilizi accertati secondo il municipio e la tipologia di abuso. Totale anni 2000-2011"
             },
             {
@@ -49,7 +49,7 @@
                 "startDate": 2000,
                 "endDate": 2011,
                 "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
-                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1640",
+                "link": "https://dataportal.daf.teamdigitale.it/#/dataset/dset979?type=open",
                 "name": "Abusi edilizi accertati secondo l'anno di accertamento e la categoria di responsabile. Anni 2000-2011"
             },
             {
@@ -59,7 +59,7 @@
                 "startDate": 2000,
                 "endDate": 2011,
                 "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
-                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1649",
+                "link": "https://dataportal.daf.teamdigitale.it/#/dataset/dset982?type=open",
                 "name": "Abusi edilizi accertati secondo il municipio e la categoria di responsabile. Totale anni 2000-2011"
             },
             {
@@ -69,7 +69,7 @@
                 "startDate": 2000,
                 "endDate": 2011,
                 "note": "Dati rimossi dal sito ufficiale, ma rimangono disponibili",
-                "link": "https://www.sciamlab.com/opendatahub/dataset/c_h501_dts1643",
+                "link": "https://dataportal.daf.teamdigitale.it/#/dataset/dset980?type=open",
                 "name": "Abusi edilizi accertati secondo l'anno di accertamento e la tipologia di abuso. Anni 2000-2011"
             }
         ],
