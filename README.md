@@ -54,7 +54,7 @@ The following is a list of the data in this repository:
 
 Let me know what do you think!
 Enjoy it? Star this project!  
-Alternatively ![https://www.buymeacoffee.com/BGp0ns64z](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png) :)  
+Alternatively ![https://www.buymeacoffee.com/BGp0ns64z](ttps://raw.githubusercontent.com/dej611/abusi-edilizi-opendata/master/public/buy_me_coffee.png) :)  
 
 Found any bug or issue? Please see below.
 
