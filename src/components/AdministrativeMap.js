@@ -185,6 +185,29 @@ class AdministrativeMap extends PureComponent {
           </ZoomableGroup>
         </ComposableMap>
         <Legend source={label} scale={scale} />
+        <div className="has-text-centered">
+          <div style={{position: 'relative'}}>
+            <div>
+              {[
+                {label: t('charts:show-trends'), absolute: false},
+                {label: t('charts:show-perc'), absolute: true},
+              ].map(({label, absolute}) => (
+                <button
+                  className={`button is-text-centered ${
+                    // this.state.absolute === absolute ? '' : 'is-text'
+                    'is-text'
+                  }`}
+                  onClick={e => {
+                    e.preventDefault();
+                    // this.togglePercentage();
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
         {isMobile && (
           <button
             className="button is-text is-pulled-right"
