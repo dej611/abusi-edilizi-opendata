@@ -151,17 +151,22 @@ class StackedChart extends Component {
     return (
       <div style={{position: 'relative'}}>
         <div>
-          <button
-            className="button is-text-centered"
-            onClick={e => {
-              e.preventDefault();
-              this.togglePercentage();
-            }}
-          >
-            {this.state.percentage
-              ? t('charts:show-trends')
-              : t('charts:show-perc')}
-          </button>
+          {[
+            {label: t('charts:show-trends'), perc: false},
+            {label: t('charts:show-perc'), perc: true},
+          ].map(({label, perc}) => (
+            <button
+              className={`button is-text-centered ${
+                this.state.percentage === perc ? '' : 'is-text'
+              }`}
+              onClick={e => {
+                e.preventDefault();
+                this.togglePercentage();
+              }}
+            >
+              {label}
+            </button>
+          ))}
         </div>
         <svg
           ref={s => (this.svg = s)}

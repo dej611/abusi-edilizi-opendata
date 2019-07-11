@@ -161,7 +161,7 @@ export default {
     'Non indicato': 'Non indicato',
     'Senza dataset': 'Senza dataset',
     'Con dataset': 'Con dataset',
-    'show-trends': 'Mostra Trends',
+    'show-trends': 'Mostra Trend',
     'show-perc': 'Mostra % relativa',
     'y-axis-per-type': 'Abusi per tipo {{postfix}}',
     Descrizione: 'Descrizione',
