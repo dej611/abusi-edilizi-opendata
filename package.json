@@ -27,7 +27,7 @@
     "react-ga": "2.5.7",
     "react-i18next": "10.11.2",
     "react-redux": "7.1.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "3.1.1",
     "react-simple-maps": "0.12.1",
     "react-tap-event-plugin": "3.0.2",
     "redux": "4.0.1"
@@ -38,26 +38,17 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "now-build": "react-scripts build",
-    "prerender": "&& node ./prerender.js"
+    "prerender": "node ./prerender.js"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "5.8.2",
-    "@improntaadvance/eslint-config": "0.9.1",
     "@mapbox/geojson-area": "0.2.2",
-    "babel-eslint": "10.0.1",
-    "eslint": "5.16.0",
-    "eslint-config-prettier": "5.0.0",
-    "eslint-config-react-app": "4.0.1",
-    "eslint-plugin-flowtype": "3.10.0",
-    "eslint-plugin-import": "2.17.3",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-prettier": "3.1.0",
-    "eslint-plugin-react": "7.13.0",
-    "eslint-plugin-react-hooks": "1.6.0",
-    "prettier": "1.18.2",
     "prop-types": "15.7.2",
     "puppeteer": "1.17.0",
     "topojson-server": "3.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
