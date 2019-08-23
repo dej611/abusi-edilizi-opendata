@@ -34,10 +34,10 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 ReactGA.set({anonymizeIp: true});
 
 const allTowns = [];
-for (const regione of toponomasticaItalia.comuni.regioni) {
-  for (const provincia of regione.province) {
-    for (const comune of provincia.comuni) {
-      allTowns.push({town: comune, county: provincia, region: regione});
+for (const region of toponomasticaItalia.comuni.regioni) {
+  for (const county of region.province) {
+    for (const town of county.comuni) {
+      allTowns.push({town, county, region});
     }
   }
 }
