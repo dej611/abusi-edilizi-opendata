@@ -163,6 +163,7 @@ class StackedChart extends Component {
                 e.preventDefault();
                 this.togglePercentage();
               }}
+              key={label}
             >
               {label}
             </button>

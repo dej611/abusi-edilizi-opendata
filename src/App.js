@@ -1,9 +1,9 @@
 /* global window */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import GradientDefinition from './components/GradientDefinition';
 import AdministrativeMap from './components/AdministrativeMap';
-import NationalMap, {NationalMapSynced} from './components/NationalMap';
+import NationalMap, { NationalMapSynced } from './components/NationalMap';
 import ViewableMonitor from './components/ViewableMonitor';
 import StackedArea from './components/StackedAreaChart';
 import SmallMultiples from './components/SmallMultiplesChart';
@@ -15,14 +15,14 @@ import Table from './components/Table';
 import MainTable from './components/MainTable';
 import SectionHeader from './components/SectionHeader';
 import AutosuggestInput from './components/Autosuggest';
-import getDataset, {getMunicipalityTransformedBy} from './data/index';
+import getDataset, { getMunicipalityTransformedBy } from './data/index';
 import townsTableData from './data/towns-data.json';
 import regionsTableData from './data/regions-data.json';
 import toponomasticaItalia from 'italia';
 import SocialButtons from './components/SocialButtons';
 import ReactGA from 'react-ga';
 
-import {withTranslation, Trans} from 'react-i18next';
+import { withTranslation, Trans } from 'react-i18next';
 
 import logo from './logo.png';
 import 'bulma/css/bulma.min.css';
@@ -31,13 +31,13 @@ import './App.css';
 
 ReactGA.initialize('UA-4417733-14');
 ReactGA.pageview(window.location.pathname + window.location.search);
-ReactGA.set({anonymizeIp: true});
+ReactGA.set({ anonymizeIp: true });
 
 const allTowns = [];
 for (const region of toponomasticaItalia.comuni.regioni) {
   for (const county of region.province) {
     for (const town of county.comuni) {
-      allTowns.push({town, county, region});
+      allTowns.push({ town, county, region });
     }
   }
 }
@@ -58,23 +58,24 @@ const normalizedTownsData = {
 const lineChartSizes = {
   width: 200,
   height: 120,
-  margin: {top: 10, left: 50, right: 15, bottom: 25},
+  margin: { top: 10, left: 50, right: 15, bottom: 25 },
 };
 
 const mainLineChartSizes = {
   ...lineChartSizes,
-  margin: {...lineChartSizes.margin, left: 50},
+  margin: { ...lineChartSizes.margin, left: 50 },
 };
+
+const breakdown = getDataset('breakdown');
 
 class App extends Component {
   state = {
     transformation: 'absolute',
   };
   render() {
-    const {data, aggregated} = getMunicipalityTransformedBy(
+    const { data, aggregated } = getMunicipalityTransformedBy(
       this.state.transformation
     );
-    const breakdown = getDataset('breakdown');
     const lastIndex = data.years.length - 2;
     const firstYear = data.years[0];
     const lastYear = data.years[lastIndex];
@@ -417,7 +418,7 @@ class App extends Component {
                 allTownsWithDataset={allTownsWithDataset}
                 countTowns={countTowns}
               >
-                Al momento {{allTownsWithDataset}} comuni (su {{countTowns}})
+                Al momento {{ allTownsWithDataset }} comuni (su {{ countTowns }})
                 offrono dataset in tema (inclusa Roma Capitale!).
               </Trans>
             </Content>
@@ -514,7 +515,7 @@ class App extends Component {
                 <img
                   src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png"
                   alt="Buy Me A Coffee"
-                  style={{height: 'auto', width: 'auto'}}
+                  style={{ height: 'auto', width: 'auto' }}
                 />
               </a>
             </div>
