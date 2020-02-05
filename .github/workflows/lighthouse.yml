@@ -12,12 +12,35 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      - name: Deploy for staging
+        env:
+          BUILD_ID: ${{ github.sha }}
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+        run: >
+          now deploy
+          --local-config=./now.json
+          --build-env NODE_ENV=production
+          --build-env BUILD_ID=${BUILD_ID}
+          --env NODE_ENV=production
+          --public
+          --no-clipboard
+          --token ${ZEIT_TOKEN}
+          > ${HOME}/deployment-url.txt
+      - name: Alias with PR number
+        env:
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+        run: >
+          now alias
+          --local-config=./now.json
+          --token ${ZEIT_TOKEN}
+          `cat ${HOME}/deployment-url.txt`
+          ${{ github.event.repository.name }}-pr-${{ github.event.number }}.now.sh
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            https://abusi-edilizi-opendata.dej611.now.sh/
-            https://abusi-edilizi-opendata.dej611.now.sh/?lang=en
+            ${{ github.event.repository.name }}-pr-${{ github.event.number }}.now.sh/
+            ${{ github.event.repository.name }}-pr-${{ github.event.number }}.now.sh/?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
