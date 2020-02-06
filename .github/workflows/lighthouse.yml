@@ -39,8 +39,8 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            ${{ github.event.repository.name }}-pr-${{ github.event.number }}.now.sh/
-            ${{ github.event.repository.name }}-pr-${{ github.event.number }}.now.sh/?lang=en
+            ${{ github.event.repository.name }}-${{ github.sha }}.now.sh/
+            ${{ github.event.repository.name }}-${{ github.sha }}.now.sh/?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
