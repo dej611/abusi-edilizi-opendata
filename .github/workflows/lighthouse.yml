@@ -27,6 +27,7 @@ jobs:
           --build-env BUILD_ID=${BUILD_ID}
           --env NODE_ENV=production
           --public
+          --debug
           --no-clipboard
           --token ${ZEIT_TOKEN}
           > ${HOME}/deployment-url.txt
