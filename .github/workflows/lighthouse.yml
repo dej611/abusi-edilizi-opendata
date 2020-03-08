@@ -23,6 +23,8 @@ jobs:
           --no-clipboard
           --token ${ZEIT_TOKEN}
           > ${HOME}/deployment-url.txt
+      - name: Debug output
+        run: cat ${HOME}/deployment-url.txt
       - name: Alias with PR number
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
