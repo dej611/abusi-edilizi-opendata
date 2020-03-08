@@ -13,7 +13,7 @@ jobs:
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
         run: >
-          npx now@16.7.3 deploy
+          npx now@16.7.3 --ignore-existing -v deploy
           --local-config=./now.json
           --build-env NODE_ENV=production
           --env NODE_ENV=production
