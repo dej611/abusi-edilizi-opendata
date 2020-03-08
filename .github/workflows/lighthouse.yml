@@ -1,18 +1,11 @@
 name: Lighthouse CI
 
-on: 
-  push:
-    branches:
-      - master
-  watch:
-    types: [started]
+on: [pull_request]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    
-    if: github.actor == github.event.repository.owner.login
 
     steps:
       - uses: actions/checkout@v1
@@ -24,7 +17,6 @@ jobs:
           now deploy
           --local-config=./now.json
           --build-env NODE_ENV=production
-          --build-env BUILD_ID=${BUILD_ID}
           --env NODE_ENV=production
           --public
           --debug
