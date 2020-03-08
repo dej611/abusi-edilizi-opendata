@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: Deploy for staging
         env:
-          BUILD_ID: ${{ github.sha }}
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
         run: >
           now deploy
@@ -22,7 +21,7 @@ jobs:
           --debug
           --no-clipboard
           --token ${ZEIT_TOKEN}
-          > ${HOME}/deployment-url.txt
+          --force
       - name: Alias with PR number
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
@@ -31,13 +30,13 @@ jobs:
           --local-config=./now.json
           --token ${ZEIT_TOKEN}
           `cat ${HOME}/deployment-url.txt`
-            ${{ github.event.repository.name }}-${{ github.sha }}-master.now.sh
+            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            ${{ github.event.repository.name }}-${{ github.sha }}-master.now.sh/
-            ${{ github.event.repository.name }}-${{ github.sha }}-master.now.sh/?lang=en
+            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh/
+            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh/?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
