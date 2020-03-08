@@ -13,15 +13,14 @@ jobs:
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
         run: >
-          now deploy
+          npx now@16.7.3 deploy
           --local-config=./now.json
           --build-env NODE_ENV=production
           --env NODE_ENV=production
           --public
-          --debug
           --no-clipboard
           --token ${ZEIT_TOKEN}
-          --force
+          > ${HOME}/deployment-url.txt
       - name: Alias with PR number
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
@@ -30,13 +29,13 @@ jobs:
           --local-config=./now.json
           --token ${ZEIT_TOKEN}
           `cat ${HOME}/deployment-url.txt`
-            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh
+            ${{ github.event.repository.name }}-${{ github.sha }}-lighthouse.now.sh
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh/
-            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh/?lang=en
+            ${{ github.event.repository.name }}-${{ github.sha }}-lighthouse.now.sh/
+            ${{ github.event.repository.name }}-${{ github.sha }}-lighthouse.now.sh/?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
