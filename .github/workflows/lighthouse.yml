@@ -27,12 +27,10 @@ jobs:
         run: cat ${HOME}/deployment-url.txt
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
-        env:
-          BUILD_URL: ${{ cat ${HOME}/deployment-url.txt }}
         with:
           urls: |
-            ${{ BUILD_URL }}
-            ${{ BUILD_URL }}?lang=en
+            ${{ cat ${HOME}/deployment-url.txt }}
+            ${{ cat ${HOME}/deployment-url.txt }}?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
