@@ -25,22 +25,14 @@ jobs:
           > ${HOME}/deployment-url.txt
       - name: Debug output
         run: cat ${HOME}/deployment-url.txt
-      - name: Alias with PR number
-        env:
-          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
-        run: >
-          npx now alias
-          --local-config=./now.json
-          --token ${ZEIT_TOKEN}
-          --debug
-          `cat ${HOME}/deployment-url.txt`
-            ${{ github.event.repository.name }}-${{ github.sha }}-lighthouse.now.sh
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
+        env:
+          BUILD_URL: ${{ cat ${HOME}/deployment-url.txt }}
         with:
           urls: |
-            ${{ github.event.repository.name }}-${{ github.sha }}-lighthouse.now.sh/
-            ${{ github.event.repository.name }}-${{ github.sha }}-lighthouse.now.sh/?lang=en
+            ${{ BUILD_URL }}
+            ${{ BUILD_URL }}?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
