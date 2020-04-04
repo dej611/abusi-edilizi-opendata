@@ -9,28 +9,39 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+        
       - name: Installing now.sh
         run: yarn add now@16.7.3
+        
       - name: Deploy for staging
         env:
+          BUILD_ID: ${{ github.sha }}
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
         run: >
           npx now deploy
           --local-config=./now.json
           --build-env NODE_ENV=production
+          --build-env BUILD_ID=${BUILD_ID}
           --env NODE_ENV=production
           --public
           --no-clipboard
           --token ${ZEIT_TOKEN}
           > ${HOME}/deployment-url.txt
-      - name: Debug output
-        run: cat ${HOME}/deployment-url.txt
+      - name: Alias with PR number
+        env:
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+        run: >
+          npx now alias
+          --local-config=./now.json
+          --token ${ZEIT_TOKEN}
+          `cat ${HOME}/deployment-url.txt`
+            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            ${{ cat ${HOME}/deployment-url.txt }}
-            ${{ cat ${HOME}/deployment-url.txt }}?lang=en
+            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh/
+            ${{ github.event.repository.name }}-${{ github.sha }}-pr.now.sh/?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
