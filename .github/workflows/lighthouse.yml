@@ -32,8 +32,8 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            ${{ github.event.repository.name }}-${{ BUILD_ID }}-preview.now.sh/
-            ${{ github.event.repository.name }}-${{ BUILD_ID }}-preview.now.sh/?lang=en
+            ${{ github.event.repository.name }}-${ BUILD_ID }-preview.now.sh/
+            ${{ github.event.repository.name }}-${ BUILD_ID }-preview.now.sh/?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
