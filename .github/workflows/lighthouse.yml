@@ -27,11 +27,13 @@ jobs:
           --no-clipboard
           --token ${ZEIT_TOKEN}
       - name: Audit URLs using Lighthouse
+        env:
+          BUILD_ID: ${ github.sha::8 }
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            ${{ github.event.repository.name }}-${{ github.sha::8 }}-preview.now.sh/
-            ${{ github.event.repository.name }}-${{ github.sha::8 }}-preview.now.sh/?lang=en
+            ${{ github.event.repository.name }}-${{ BUILD_ID }}-preview.now.sh/
+            ${{ github.event.repository.name }}-${{ BUILD_ID }}-preview.now.sh/?lang=en
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
