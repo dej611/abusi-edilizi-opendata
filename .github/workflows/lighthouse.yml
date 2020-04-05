@@ -35,7 +35,7 @@ jobs:
           --local-config=./now.json
           --token ${ZEIT_TOKEN}
           `cat ${HOME}/deployment-url.txt`
-            ${{ github.event.repository.name }}-${{ github.sha }}-preview.now.sh
+          ${{ github.event.repository.name }}-${{ github.sha }}-preview.now.sh
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
