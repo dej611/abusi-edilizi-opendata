@@ -1,3 +1,3 @@
-const prerender = require('./prerender/prerender');
+const prerender = require("./prerender/prerender");
 
 prerender();

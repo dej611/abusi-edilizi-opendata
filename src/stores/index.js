@@ -1,15 +1,15 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from "redux";
 
-export const HOVER_AREA = 'HOVER_AREA';
-export const HOVER_YEAR = 'HOVER_YEAR';
-export const HOVER_CLEAR = 'HOVER_CLEAR';
-export const SELECT_AREA = 'SELECT_AREA';
-export const SELECT_YEAR = 'SELECT_YEAR';
-export const CLEAR = 'CLEAR';
-export const HOVER_REGION = 'HOVER_REGION';
-export const SELECT_TOWN = 'SELECT_TOWN';
-export const CLEAR_TOWN = 'CLEAR_TOWN';
-export const CHANGE_LANG = 'CHANGE_LANG';
+export const HOVER_AREA = "HOVER_AREA";
+export const HOVER_YEAR = "HOVER_YEAR";
+export const HOVER_CLEAR = "HOVER_CLEAR";
+export const SELECT_AREA = "SELECT_AREA";
+export const SELECT_YEAR = "SELECT_YEAR";
+export const CLEAR = "CLEAR";
+export const HOVER_REGION = "HOVER_REGION";
+export const SELECT_TOWN = "SELECT_TOWN";
+export const CLEAR_TOWN = "CLEAR_TOWN";
+export const CHANGE_LANG = "CHANGE_LANG";
 
 const INITIAL_STATE = {
   selected_area: null,
@@ -19,7 +19,7 @@ const INITIAL_STATE = {
   hover_year: null,
   hover_offset: 0,
   hover_region: null,
-  language: 'it',
+  language: "it",
 };
 
 function navigation(state = INITIAL_STATE, action) {
@@ -81,4 +81,4 @@ function navigation(state = INITIAL_STATE, action) {
   }
 }
 
-export default combineReducers({navigation});
+export default combineReducers({ navigation });
