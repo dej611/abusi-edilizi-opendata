@@ -26,7 +26,7 @@ import "mailgo";
 import { withTranslation, Trans } from "react-i18next";
 
 import logo from "./logo.png";
-import "bulma/css/bulma.min.css";
+import "./bulma.custom.min.css";
 import "@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css";
 import "./App.css";
 
