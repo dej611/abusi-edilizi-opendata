@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 
-import './index.css';
-import registerServiceWorker from './registerServiceWorker';
+import "./index.css";
+import registerServiceWorker from "./registerServiceWorker";
 
-import './i18n/setup';
+import "./i18n/setup";
 
-import navigation from './stores';
-import App from './App';
+import navigation from "./stores";
+import App from "./App";
 
 const store = createStore(
   navigation,
@@ -20,6 +20,6 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 registerServiceWorker();

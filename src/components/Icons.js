@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Check = () => (
   <svg width="12" height="12">
