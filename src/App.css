@@ -414,3 +414,30 @@ background-color: #FF6600
 
 .resp-sharing-button--telegram:hover {
   background-color: #4B97D1;}
+
+
+.blue-tooltip {
+  position: absolute;
+  background-color: rgb(92, 119, 235);
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+  font-size: 14px;
+  box-shadow: rgba(33, 33, 33, 0.2) 0px 1px 2px;
+  line-height: 1em;
+  pointer-events: none;
+  transform: translateX(10%);
+}
+
+.multiple-tooltip {
+  position: absolute;
+  color: rgb(92, 119, 235);
+  background-color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+  font-size: 14px;
+  box-shadow: rgba(33, 33, 33, 0.2) 0px 1px 2px;
+  line-height: 1em;
+  pointer-events: none;
+  transform: translateX(-50%);
+}

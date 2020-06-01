@@ -1,32 +1,32 @@
-import React, {Fragment} from 'react';
-import {string, func} from 'prop-types';
-import {LegendLinear, LegendItem, LegendLabel} from '@vx/legend';
+import React, { Fragment } from "react";
+import { string, func } from "prop-types";
+import { LegendLinear, LegendItem, LegendLabel } from "@vx/legend";
 
-function Legend({scale, source}) {
+function Legend({ scale, source }) {
   return (
     <Fragment>
       <div className="legend-container">
         <LegendLinear
           scale={scale}
-          direction={'row'}
+          direction={"row"}
           labelFormat={(d, i) => {
             if (i === 0 || i === 4) {
               return d.toFixed(0);
             }
-            return '';
+            return "";
           }}
         >
-          {labels => (
+          {(labels) => (
             <div className="flex-row">
               {labels.map((label, i) => {
                 const size = 15;
                 return (
                   <LegendItem
                     key={`legend-linear-${i}`}
-                    margin={'0 8px 8px 0'}
+                    margin={"0 8px 8px 0"}
                     flexDirection="column"
                   >
-                    <svg width={size} height={size} style={{margin: '2px 0'}}>
+                    <svg width={size} height={size} style={{ margin: "2px 0" }}>
                       <circle
                         fill={label.value}
                         r={size / 2}
@@ -34,7 +34,7 @@ function Legend({scale, source}) {
                         cy={size / 2}
                       />
                     </svg>
-                    <LegendLabel align={'left'} margin={0}>
+                    <LegendLabel align={"left"} margin={0}>
                       {label.text}
                     </LegendLabel>
                   </LegendItem>
